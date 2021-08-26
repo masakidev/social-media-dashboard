@@ -17,7 +17,7 @@ const data = [
         number: 52,
         porcentage: -2,
       },
-      pagesview: {
+      pagesviews: {
         number: 87,
         porcentage: 3,
       }
@@ -52,11 +52,11 @@ const data = [
       followers: 1143500,
       followersToday: 1099,
       likes: {
-        number: 5462,
+        number: 10462,
         porcentage: 2257,
       },
       profileviews: {
-        number: 52000,
+        number: 124000,
         porcentage: 1375,
       }
     }, 
@@ -71,11 +71,11 @@ const data = [
       subscribers: 10039,
       subscribersToday: -144,
       likes: {
-        number: 107,
+        number: 872,
         porcentage: -19,
       },
-      pagesview: {
-        number: 1407,
+      totalviews: {
+        number: 14070,
         porcentage: -12,
       }
     }, 

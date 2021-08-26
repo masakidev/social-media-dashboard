@@ -4,7 +4,7 @@ import Overview from './components/Overview';
 
 const App = () => {
   return (
-    <div className="px-6 py-10 text-sm font-inter bg-verydarkbluebg">
+    <div className="px-6 py-10 text-sm font-inter bg-verydarkbluebg select-none">
       <Header />
       <Card />
       <Overview />

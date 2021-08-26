@@ -3,13 +3,36 @@ import iconDown from '../images/icon-down.svg';
 import data from './data';
 
 const Card = () => {
+  const styleBorderCard = 'w-100 h-1 relative top-0 mb-6'
+
+
   return (
     <div className="mb-12">
       {
         data.map(card => (
           <div 
-          className="bg-darkdesaturatedbluecardbg text-center rounded-md mb-6 py-6 text-desaturatedbluetext border-t-4" 
+          className="bg-darkdesaturatedbluecardbg text-center rounded-lg mb-6 pb-6 text-desaturatedbluetext overflow-hidden"
           key={card.social.id}>
+            <div 
+            className={
+              card.social.id === 'Facebook'
+              ?
+              `${styleBorderCard} bg-facebook`
+              :
+              card.social.id === 'Twitter'
+              ?
+              `${styleBorderCard} bg-twitter`
+              :
+              card.social.id === 'Instagram'
+              ?
+              `${styleBorderCard} bg-gradient-to-r from-instagramfrom to-instagramto`
+              :
+              card.social.id === 'Youtube'
+              ?
+              `${styleBorderCard} bg-youtube`
+              :
+              styleBorderCard 
+            }></div>
             <div className="flex justify-center gap-2 mb-5">
               <img className="h-5" src={card.social.logo} alt={card.social}/>
               <h2 className="font-bold">
@@ -17,7 +40,7 @@ const Card = () => {
               </h2>
             </div>
             <div className="mb-5">
-              <h1 className="text-6xl font-bold text-whitetext select-none">
+              <h1 className="text-6xl font-bold text-whitetext">
                 {
                   card.stats.followers > 1000000 || card.stats.subscribers > 1000000 
                   ? 
@@ -56,7 +79,12 @@ const Card = () => {
                 iconUp
               } 
               alt="icon up"/>
-              <h1 className={card.stats.followersToday < 0 || card.stats.subscribersToday < 0 ? 'text-brightred font-bold' : 'text-limegreen font-bold'}>
+              <h1 className={
+                card.stats.followersToday < 0 || card.stats.subscribersToday < 0 
+                ? 
+                'text-brightred font-bold' 
+                : 
+                'text-limegreen font-bold'}>
               {
                 card.stats.followersToday < 0 || card.stats.subscribersToday < 0 
                 ? 
